@@ -40,6 +40,8 @@ dependencies {
     implementation "androidx.appcompat:appcompat:$androidAppCompat"
     implementation "com.google.android.material:material:$googleAndroidMaterial"
     implementation "androidx.constraintlayout:constraintlayout:$androidConstraintLayout"
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.4.1'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.4.1'
     testImplementation "junit:junit:$junit"
     androidTestImplementation "androidx.test.ext:junit:$androidJunit"
     androidTestImplementation "androidx.test.espresso:espresso-core:$androidEspresso"
