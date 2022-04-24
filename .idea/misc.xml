@@ -4,7 +4,9 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/android studio/MySpace/app/src/main/res/drawable/ic_menu_camera.xml" value="0.117" />
+        <entry key="..\:/android studio/MySpace/app/src/main/res/drawable/ic_menu_help.xml" value="0.153" />
         <entry key="..\:/android studio/MySpace/app/src/main/res/drawable/ic_menu_home.xml" value="0.117" />
+        <entry key="..\:/android studio/MySpace/app/src/main/res/drawable/ic_menu_setting.xml" value="0.153" />
         <entry key="..\:/android studio/MySpace/app/src/main/res/drawable/side_nav_bar.xml" value="0.117" />
         <entry key="..\:/android studio/MySpace/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/android studio/MySpace/app/src/main/res/layout/app_bar_main.xml" value="0.13272543059777103" />

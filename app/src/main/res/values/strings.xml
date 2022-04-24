@@ -9,4 +9,6 @@
 
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Gallerie</string>
+    <string name="menu_setting">Paramètres</string>
+    <string name="menu_help">Aide</string>
 </resources>
