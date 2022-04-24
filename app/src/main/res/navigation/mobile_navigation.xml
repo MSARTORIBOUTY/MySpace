@@ -18,14 +18,22 @@
         tools:layout="@layout/fragment_gallery" />
 
     <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.example.myspace.ui.slideshow.SlideshowFragment"
-        android:label="slideshow"
-        tools:layout="@layout/fragment_slideshow" />
-
-    <fragment
-        android:id="@+id/nav_param"
+        android:id="@+id/nav_setting"
         android:name="com.example.myspace.ui.param.ParamFragment"
         android:label="param"
-        tools:layout="@layout/fragment_param" />
+        tools:layout="@layout/fragment_param" >
+        <action
+            android:id="@+id/action_nav_setting_to_nav_home"
+            app:destination="@id/nav_home" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_help"
+        android:name="com.example.myspace.ui.param.ParamFragment"
+        android:label="param"
+        tools:layout="@layout/fragment_param">
+        <action
+            android:id="@+id/action_nav_setting_to_nav_home"
+            app:destination="@id/nav_home"/>
+    </fragment>
 </navigation>
