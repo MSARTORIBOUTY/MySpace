@@ -1,8 +1,12 @@
 package com.example.myspace
 
+import android.content.ActivityNotFoundException
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.Toast
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.navigation.NavigationView
 import androidx.navigation.findNavController
@@ -15,6 +19,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
 import androidx.navigation.fragment.findNavController
 import com.example.myspace.databinding.ActivityMainBinding
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class MainActivity : AppCompatActivity() {
 
@@ -45,6 +50,10 @@ class MainActivity : AppCompatActivity() {
 
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+
+        findViewById<FloatingActionButton>(R.id.fab).setOnClickListener { view ->
+            sendEmail("email@gmail.com", "un petit mail", "le contenu d'un message!")
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -74,12 +83,28 @@ class MainActivity : AppCompatActivity() {
 
         return when (item.itemId) {
             R.id.action_settings -> {
-
                 navController.navigate(R.id.nav_setting)
                 true
             }
             else -> super.onOptionsItemSelected(item)
         }
+    }
+
+    private fun sendEmail(to: String, subject: String, msg: String) {
+        val emailIntent = Intent(Intent.ACTION_SEND)
+
+        emailIntent.data = Uri.parse("mailto:")
+        emailIntent.type = "text/plain"
+        emailIntent.putExtra(Intent.EXTRA_EMAIL, arrayOf(to))
+        emailIntent.putExtra(Intent.EXTRA_SUBJECT, subject)
+        emailIntent.putExtra(Intent.EXTRA_TEXT, msg)
+
+        try {
+            startActivity(Intent.createChooser(emailIntent, "envoyer un email avec :"))
+        } catch (ex: ActivityNotFoundException) {
+            Toast.makeText(this, "pas d'email", Toast.LENGTH_SHORT).show()
+        }
+        startActivity(emailIntent)
     }
 
 
