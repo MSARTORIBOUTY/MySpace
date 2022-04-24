@@ -3,7 +3,7 @@
 Welcome to the app : MySpace
 Made with Kotlin for Android
 
-[![Image from Gyazo](https://i.gyazo.com/1027f611cf4f14808b79d665b811653b.gif)](https://gyazo.com/1027f611cf4f14808b79d665b811653b)
+[![Image from Gyazo](https://i.gyazo.com/1624c569fb2222ef6f2eabf5c82205f9.gif)](https://gyazo.com/1624c569fb2222ef6f2eabf5c82205f9)
 
 Here you will find the functional model of the MySpace application.
 
