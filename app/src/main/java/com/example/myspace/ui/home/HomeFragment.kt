@@ -22,12 +22,15 @@ class HomeFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+
+        // We get the home model
         val homeViewModel =
             ViewModelProvider(this).get(HomeViewModel::class.java)
 
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
+        // We add the home model's text to the home fragment's TextView
         val textView: TextView = binding.textHome
         homeViewModel.text.observe(viewLifecycleOwner) {
             textView.text = it
@@ -35,6 +38,7 @@ class HomeFragment : Fragment() {
         return root
     }
 
+    // The binding is emptied
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null

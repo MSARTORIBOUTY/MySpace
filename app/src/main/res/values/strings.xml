@@ -14,4 +14,6 @@
 
     <string name="param_title">Paramètres et Aide</string>
     <string name="return_btn">Retour</string>
+
+    <string name="home_text">Bienvenue sur votre espace</string>
 </resources>

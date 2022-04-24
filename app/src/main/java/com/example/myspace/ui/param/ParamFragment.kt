@@ -23,11 +23,13 @@ class ParamFragment : Fragment() {
         binding = FragmentParamBinding.inflate(layoutInflater)
         (activity as AppCompatActivity).supportActionBar?.title = "Paramètres"
         return binding.root
-        //return inflater.inflate(R.layout.fragment_main, container, false)
     }
+
+    // What we do once the fragment is created
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        // When the button is clicked, the user is returned to home
         binding.returnBtn.setOnClickListener {
             findNavController().navigate(R.id.action_nav_setting_to_nav_home)
         }
